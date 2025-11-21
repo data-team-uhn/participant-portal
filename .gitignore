@@ -116,3 +116,4 @@ data/
 /app/static
 /audit_logs
 
+/api/secrets/*
