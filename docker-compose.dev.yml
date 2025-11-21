@@ -1,0 +1,121 @@
+version: '2.4'
+
+services:
+  app:
+    platform: linux/amd64
+    container_name: participant-app
+    build: ./app
+    volumes:
+      - ./app/.babelrc:/home/node/.babelrc
+      - ./app/src:/home/node/src
+      - ./app/start.js:/home/node/start.js
+      - ./app/webpack.config.js:/home/node/webpack.config.js
+      - ./app/static:/home/node/dist
+    environment:
+      - NODE_OPTIONS="--max-old-space-size=3072"
+      - LOG_FORMAT=dev
+      - NODE_ENV=development
+      - ENVIRONMENT=development
+      - SPA_BASE_URL=http://localhost:$APP_PORT
+      - API_BASE_URL=http://localhost:$API_PORT
+      - APP_BASE_URL=http://localhost:$APP_PORT
+      - INTERNAL_API_BASE_URL=http://api:8000
+      - REGISTRY_EXTERNAL_ID
+      - ADMIN_CONTACT
+      - GOOGLE_CAPTCHA_ENABLED
+      - GOOGLE_CAPTCHA_SITE_KEY
+      - MAX_CONTACT_TIMES
+    ports:
+      - "$APP_PORT:8000"
+    entrypoint: node start.js
+    networks:
+      - dev-portal
+
+  api:
+    platform: linux/amd64
+    container_name: participant-api
+    build: ./api
+    volumes:
+      - ./api/config:/home/node/config
+      - ./api/src:/home/node/src
+      - ./api/scripts:/home/node/scripts
+      - ./api/static/uploads:/home/node/uploads
+    environment:
+      - LOG_FORMAT=dev
+      - NODE_ENV=development
+      - ENVIRONMENT=development
+      - API_BASE_URL=http://localhost:$API_PORT
+      - APP_BASE_URL=http://localhost:$APP_PORT
+      - DEBUG=participant-portal:*
+      - POSTGRES_DB=portal
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=portal
+      - MAIL_SERVICE
+      - ADMIN_CONTACT
+      - ADMIN_CONTACT_NAME
+      - REGISTRY_EXTERNAL_ID
+      - GOOGLE_CAPTCHA_ENABLED
+      - GOOGLE_CAPTCHA_URL
+      - GOOGLE_CAPTCHA_SITE_KEY
+      - MS_CLIENT_ID
+      - MS_AUTHORITY
+      - MS_TEST_MODE
+      - MS_TEST_MODE_EMAIL
+      - MAX_CONTACT_TIMES
+    env_file:
+      - ./api/secrets/POSTGRES_PASSWORD
+      - path: api/secrets/GOOGLE_API_KEY
+        required: false
+      - path: api/secrets/MS_CERTIFICATE_THUMBPRINT
+        required: false
+      - path: api/secrets/MS_CERTIFICATE_PRIVATE_KEY
+        required: false
+    ports:
+    - "$API_PORT:8000"
+    - "9231:9229"
+    command: yarn run dev
+    depends_on:
+      postgres:
+        condition: service_started
+      mailhog:
+        condition: service_started
+    networks:
+      - dev-portal
+
+  mailhog:
+    platform: linux/amd64
+    container_name: participant-mailhog
+    image: mailhog/mailhog
+    networks:
+      - dev-portal
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+  postgres:
+    platform: linux/amd64
+    container_name: participant-postgres
+    image: postgres:16.3
+    environment:
+      - POSTGRES_DB=portal
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=portal
+    env_file:
+      - ./api/secrets/POSTGRES_PASSWORD
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - dev-portal
+    ports:
+      - 5431:5432
+
+volumes:
+  postgres-data: {}
+
+networks:
+  dev-portal:
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
+    ipam:
+      config:
+      - subnet: 10.104.0.0/24

@@ -1,0 +1,102 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+div,
+section {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF;
+    overflow: auto;
+    touch-action: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.app {
+  height: 100%;
+}
+
+.app-box {
+  height: 100%;
+  width: 100%;
+  overflow: hidden scroll;
+  position: absolute;
+  height: -webkit-fill-available;
+  background-color: #FFF;
+  scroll-behavior: smooth;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Survey tool tips.
+ * Borrowed from https://inclusive-components.design/tooltips-toggletips/#interaction
+ * The text that should have a tooltip should be wrapped in
+ * an element with class tooltip-container.
+ * The tooltip text should be wrapped in an element with the role "tooltip".
+ * The tooltip should be a child of the container.
+ *
+ * ex:
+ * <span class="tooltip-container">
+ *   some text
+ *   <span role="tooltip">
+ *     tooltip content
+ *   </span>
+ * </span>
+ *
+ *
+ *
+ */
+.tooltip-container {
+  position: relative;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+  width: auto;
+}
+
+[role="tooltip"] {
+  display: none;
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+  padding: 0.5em;
+  background: #FFFFFF;
+  border: 0.1em solid;
+  border-radius: 1em;
+  font-family: inherit;
+  line-height: 1.5em;
+  overflow-y: auto;
+  font-weight: normal;
+  text-decoration: none;
+  width: 400%;
+  max-width: 60vw;
+}
+
+.tooltip-container:hover > [role="tooltip"],
+.tooltip-container:focus > [role="tooltip"] {
+  display: block;
+}
+
+@media print {
+    .app-box { position: unset; }
+}

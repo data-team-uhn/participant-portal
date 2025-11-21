@@ -1,0 +1,15 @@
+{
+  "extends": "..",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "../lib/scripts",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.json",
+  ]
+}

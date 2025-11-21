@@ -1,0 +1,21 @@
+{
+  "host": "127.0.0.1",
+  "port": 8000,
+  "public": "/home/node/public/",
+  "paginate": {
+    "default": 50,
+    "max": 100
+  },
+  "postgres": {
+    "database": "POSTGRES_DB",
+    "username": "POSTGRES_USER",
+    "password": "POSTGRES_PASSWORD",
+    "host": "POSTGRES_HOST"
+  },
+  "static": {
+    "uploadRoot": "/home/node/uploads"
+  },
+  "audit": {
+    "dirname": "AUDIT_LOGS_DIR"
+  }
+}

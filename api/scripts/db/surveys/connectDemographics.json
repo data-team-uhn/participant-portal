@@ -1,0 +1,49 @@
+{
+  "title": "Demographics",
+  "pages": [
+    {
+      "title": "Introduction",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "TODO"
+        }
+      ]
+    },
+    {
+      "title": "Signatures",
+      "nextAction": "submit",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Please fill in your information below."
+        },
+        {
+          "type": "textField",
+          "isRequired": true,
+          "id": "signed-name",
+          "text": "Printed Name"
+        },
+        {
+          "type": "datePicker",
+          "isRequired": true,
+          "disabled": true,
+          "min": "today",
+          "max": "today",
+          "id": "consent-date",
+          "text": "Date"
+        }
+      ]
+    }
+  ]
+}

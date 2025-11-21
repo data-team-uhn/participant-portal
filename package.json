@@ -1,0 +1,27 @@
+{
+  "name": "participant-portal",
+  "version": "0.4.0",
+  "license": "MIT",
+  "description": "Portal for researchers to view study data and participants",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uhn-data-pro/participant-portal"
+  },
+  "bugs": {},
+  "scripts": {
+    "db:reset": "docker-compose -f docker-compose.dev.yml run --rm api npx ts-node scripts db/reset",
+    "db:test-data": "docker-compose -f docker-compose.dev.yml run --rm api npx ts-node scripts db/reset db/admin-data db/initial-prod-data db/test-data",
+    "db:prod-data": "docker-compose -f docker-compose.prod.yml run --rm api npx ts-node scripts db/reset db/initial-prod-data",
+    "db:admin-data": "docker-compose -f docker-compose.prod.yml run --rm api npx ts-node scripts db/reset db/admin-data",
+    "db:update-surveys": "docker-compose -f docker-compose.dev.yml run --rm api npx ts-node scripts db/surveys/update-forms",
+    "psql": "docker-compose -f docker-compose.dev.yml exec postgres psql -U portal portal",
+    "pluck:api": "docker cp participant-api:/home/node/package.json api && docker cp participant-api:/home/node/yarn.lock api",
+    "pluck:app": "docker cp participant-app:/home/node/package.json app && docker cp participant-app:/home/node/yarn.lock app",
+    "migrate": "docker-compose -f docker-compose.dev.yml run --rm api npm run db:migrate",
+    "migrate:status": "docker-compose -f docker-compose.dev.yml run --rm api npm run db:migrate:status",
+    "migrate:undo": "docker-compose -f docker-compose.dev.yml run --rm api npm run db:migrate:undo",
+    "migrate:create": "docker-compose -f docker-compose.dev.yml run --rm api npm run db:migrate:create --",
+    "test:setup": "docker-compose -f docker-compose.test.yml up -d api-test",
+    "test:run": "docker-compose -f docker-compose.test.yml exec api-test npm run mocha"
+  }
+}

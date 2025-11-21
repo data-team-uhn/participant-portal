@@ -1,0 +1,59 @@
+{
+  "title": "Communication Preferences",
+  "pages": [
+    {
+      "title": "Introduction",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "TODO"
+        }
+      ]
+    },
+    {
+      "title": "Communication Preferences",
+      "nextAction": "submit",
+      "components": [
+        {
+          "type": "radiogroup",
+          "isRequired": true,
+          "id": "contacted-future-studies",
+          "text": "Would you like to be contacted for future studies?",
+          "choices": [
+            {
+              "value": "Yes"
+            },
+            {
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "isRequired": true,
+          "id": "preferred-contact",
+          "text": "How would you like to be contacted?",
+          "choices": [
+            {
+              "value": "Email"
+            },
+            {
+              "value": "Phone"
+            }
+          ],
+          "enableWhen": [
+            {
+              "question": "contacted-future-studies",
+              "answer": "Yes"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

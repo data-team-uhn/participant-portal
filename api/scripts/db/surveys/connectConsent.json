@@ -1,0 +1,693 @@
+{
+  "title": "All for One Connect Rare Disease Patient Registry",
+  "secondaryTitle": "Consent Form",
+  "showWithdrawIfComplete": true,
+  "pages": [
+    {
+      "title": "Study Information",
+      "components": [
+        {
+          "type": "text",
+          "text": "<strong>Title:</strong> All for One Connect Rare Disease Patient Registry"
+        },
+        {
+          "type": "text",
+          "text": "<strong>Principal Investigator:</strong> <a href=\"tel:5555555555\">(p) 555-555-5555</a>, <a href=\"mailto:test@test.com\">(e) test@test.com</a>"
+        },
+        {
+          "type": "text",
+          "text": "<strong>Registry Coordinator</strong>: <a href=\"mailto:test@test.com\">test@test.com</a>"
+        },
+        {
+          "type": "text",
+          "text": "<strong>Funder(s):</strong>"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mt": 4
+            }
+          },
+          "text": "Select the <b>Next</b> button below to read more."
+        }
+      ]
+    },
+    {
+      "title": "Introduction",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "<em>If you have the capacity to consent, the word “you” in this document refers to YOU.</em>"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "<em>If you are a Substitute Decision Maker, you are being asked to provide informed consent on behalf of a person who is unable to provide consent for themselves. If the participant gains the capacity to consent for themselves, your consent for them will end. Throughout this form, “you” means the PERSON YOU ARE REPRESENTING.</em>"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "You are being invited to join a rare disease registry called All for One Connect. A registry is a database that stores information about a group of people who have something in common. By collecting information in one place, it can be used for many purposes. One purpose is to contact participants about research opportunities they may be eligible for. This research may help generate evidence to improve health care and outcomes for people with rare diseases."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "You are invited to participate in this registry because you, or a member of your family, are known or suspected to have a rare genetic condition, for which you are receiving (or have received) a genetic test called genome-wide sequencing. This consent form provides you with information to help you make an informed choice. Please read this document carefully and\n\nask any questions you may have. All your questions should be answered to your satisfaction before you decide whether to join the registry."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Please take your time in making your decision. You may find it helpful to discuss it with your friends and family. If you are a First Nations, Métis or Inuit who has contact with Elders, you may want to talk to them before you make a decision about joining this registry. Elders may have concerns about some procedures, including genetic testing."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Taking part in this registry is voluntary. You have the option to not participate at all or you may choose to leave the registry at any time. Whatever you choose, it will not affect the usual medical care that you receive outside of the registry"
+        },
+        {
+          "type": "text",
+          "props": {
+            "variant": "h5",
+            "component": "h2",
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Is there a conflict of interest?"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mt": 2
+            }
+          },
+          "text": "There are no conflicts of interest to declare related to this registry."
+        }
+      ]
+    },
+    {
+      "title": "Why is this registry being made?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 3
+            }
+          },
+          "text": "You are being asked to share your health and genetic information with the All for One Connect registry because your doctor suspects that the disease in your family is caused by a change in your DNA."
+        },
+        {
+          "type": "expandableText",
+          "accessibleId": "expand-dna",
+          "summary": "Tell me more about DNA",
+          "details": "Our DNA, and more specifically, the parts of our DNA that make up our genes, is important for telling our bodies how to develop and function. DNA sequences vary slightly from one person to the next, and these differences are called variants. While most variants are harmless and make each person unique, some can prevent a gene from working properly and cause a genetic disease. Genome-wide sequencing is one of the best genetic tests to detect disease-causing variants in families with rare diseases, but many families do not receive a diagnosis. For both diagnosed and undiagnosed individuals with a rare disease, participating in research may help others with similar conditions, or the community as a whole, but access to research studies is not equal across Canada."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mt": 3,
+              "mb": 2
+            }
+          },
+          "text": "The purpose of this registry is to improve research access for individuals with a rare disease by connecting participants with approved studies they may be eligible for. The registry is expected to advance rare disease research by supporting the sharing of rare disease data worldwide."
+        }
+      ]
+    },
+    {
+      "title": "How many people will join the registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "It is anticipated that more than 1000 participants will join this registry, from sites located across Canada. The registry will be ongoing for years to come."
+        }
+      ]
+    },
+    {
+      "title": "What will happen in this registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 3
+            }
+          },
+          "text": "If you consent to participate, registry personnel will collect information about you and enter this information into an electronic database. This database is only accessible by registry personnel. The data will be securely stored on servers located in Canada, including cloud-based servers. The data will be maintained and overseen by the registry steward, following the All for One Connect Governance Framework. The registry will collect and store the following information about you:"
+        },
+        {
+          "type": "expandableText",
+          "accessibleId": "expand-personal-info",
+          "summary": "<strong>1. Personal information</strong>",
+          "details": "You will provide basic information on yourself and how you can be contacted by registry personnel. This is called your profile data. To protect your identity, your profile data will be stored separately from all other registry data. A unique participant code will be used to link your profile data with all other registry data.",
+          "props": {
+            "sx": {
+              "mb": 1,
+              "&.Mui-expanded:last-of-type": {
+                "mb": 1
+              }
+            }
+          }
+        },
+        {
+          "type": "expandableText",
+          "accessibleId": "expand-health-info",
+          "summary": "<strong>2. Health information</strong>",
+          "details": "Relevant health information about the rare disease in your family as well as the testing you received will be collected from the institution that performed and/or ordered your genetic test. This information may be found in medical and laboratory records that may originate from hospitals, general practitioners, or specialists and contain information about your medical history, physical examinations, and past test results that are relevant.",
+          "props": {
+            "sx": {
+              "mb": 1,
+              "&.Mui-expanded:last-of-type": {
+                "mb": 1
+              }
+            }
+          }
+        },
+        {
+          "type": "expandableText",
+          "accessibleId": "expand-previous-info",
+          "summary": "<strong>3. Previous genetic testing information</strong>",
+          "details": "Previous genetic testing data: The registry will coordinate the transfer of previously performed genetic testing data (e.g., genome-wide sequencing data) and any other available associated data (e.g., the year the sequencing was done) into the genomic data repository. Following receipt of the genetic testing data, the registry will link it to your health information using your participant code."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mt": 3,
+              "mb": 2
+            }
+          },
+          "text": "Please talk to registry personnel if there is information that you do not feel comfortable sharing."
+        }
+      ]
+    },
+    {
+      "title": "How will my data be used and shared?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Your registry data may be shared with research partners from around the world - who may include researchers from academia, charitable organizations, hospitals, and for- profit companies, such as drug companies - who would use it to improve patient care or advance genetic knowledge, for clinical and/or general research purposes."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Research partners can apply to discover participants who may be eligible for their studies by searching limited parts of your <span tabindex=0 class=\"tooltip-container\" aria-describedby=\"coded-data-desc\">coded data<span id=\"coded-data-desc\" role=\"tooltip\">\"Coded\" means that directly identifying information (such as your name and date of birth) will be replaced by a code (i.e., your participant code) in your data.</span></span> (called Registered Access). Should you meet eligibility criteria for a given study, your coded health and genetic data may be shared with a research partner who has 1) approval of a Research Ethics Board (if applicable), 2) approval of the All for One Connect data access committee, and 3) signs a contract that ensures the coded data will only be used for the approved research (called Controlled Access). The research partner will be required to protect your data to the same standard as the registry."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "If the research partner <strong>requires your active participation</strong> (e.g., for the collection of additional information or a biological sample), then you will be re-contacted by registry personnel to inform you about this opportunity. You will have the choice to give permission (or not) for the registry to release your contact information to the research partner, so that they may reach out to inform you about their study. You will have the choice to consent (or not) to this research opportunity."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "If the requesting research partner <strong>does not require your active participation</strong>, you will not be contacted for the use of your registry data. In this case, the information provided to the research partner will not include information that can directly identify you, such as your name, address, or phone number. Because of the broad nature of this data sharing, it is unlikely that you will be notified if your information is used, and unlikely that you will receive any results."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Very limited coded registry data may be placed in publicly accessible database(s) (called Open Access), available to anyone with internet access. The goal of sharing is to make more research possible. However, the participant code matching your registry data with your name and other directly identifying registry data will not be shared."
+        }
+      ]
+    },
+    {
+      "title": "What are the responsibilities of registry participants?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "If you choose to participate in this registry, you will be expected to:<ul><li>Provide your personal information to the registry, and</li><li>Update the registry if any of your personal information changes (e.g., contact information, province of residence).</li></ul>"
+        }
+      ]
+    },
+    {
+      "title": "How long will participants be in the registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "As research can benefit both diagnosed and undiagnosed individuals with rare disease, as well as the rare disease community overall, both now and in the future, participation in the registry has no time limit. Participants will continue to be included in the registry unless their consent is withdrawn, or the registry is closed."
+        }
+      ]
+    },
+    {
+      "title": "Can participants choose to leave the registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "You can choose to end your participation in this registry (called withdrawal) at any time without having to provide a reason. If you choose to withdraw from the registry, you are encouraged to contact registry personnel."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "You may withdraw your permission to use information that was collected about you for this registry at any time by letting registry personnel know. However, this would also mean that you withdraw from the registry. This means that all your information will be removed and destroyed from the central database. However, any information that has already been shared and used by research partners cannot be withdrawn."
+        }
+      ]
+    },
+    {
+      "title": "What are the risks or harms of participating in this registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 3
+            }
+          },
+          "text": "There are no known physical risks associated with joining the registry, but there may be informational risks. There is always a small risk that your data may be used to reidentify you."
+        },
+        {
+          "type": "expandableText",
+          "summary": "Tell me more about genetic information",
+          "details": "Genetic information is unique to every person, just like a fingerprint. This means it is possible that you can be identified by your genetic code. However, this is not easy to do. As technology advances, there may be new ways of linking data back to you that we cannot foresee today, despite the strict security measures. The potential reidentification or unintentional release of your genetic and clinical research data could lead to loss of privacy for you or your biological relatives. Finally, you may find the time to learn of, and participate in, research to be burdensome."
+        }
+      ]
+    },
+    {
+      "title": "What are the benefits of participating in this registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "There are no benefits to you for joining the registry. However, the opportunity to be connected and participate in research studies may include benefits to you and/or others with rare disease."
+        }
+      ]
+    },
+    {
+      "title": "How will participant information be kept confidential?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "If you decide to participate in this registry, registry personnel will only collect the information they need for the registry."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 3
+            }
+          },
+          "text": "Records identifying you in this registry will be kept confidential and, to the extent permitted by the applicable laws, will not be disclosed or made publicly available, except as described in this consent document."
+        },
+        {
+          "type": "expandableText",
+          "summary": "Who may see your information",
+          "details": "Authorized representatives of the following organizations may look at your original (identifiable) medical records, to check that the information collected for the registry is correct and follows proper laws and guidelines.<ul><li>The research ethics board who oversees the ethical conduct of this registry</li><li>Connect and affiliated sites, to oversee the conduct of the registry</li></ul>Information that is collected about you for the registry (called registry data) may also be sent to the organizations listed above. Representatives of Clinical Trials Ontario, a not-for-profit organization, may see registry data that is sent to the research ethics board for this registry. Your name, address, email, or other information that may directly identify you will not be used. The records received by these organizations may contain your participant code, sex at birth, and date of birth."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mt": 3,
+              "mb": 2
+            }
+          },
+          "text": "This registry collects information on race and ethnicity as well as other characteristics of individuals because it aids in the interpretation of genetic data. Providing information on your race or ethnic origin is voluntary."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "The registry offers telephone, postal, video conferencing (e.g., Zoom), and e-mail communication with participants in English or French. Please let registry personnel know if you prefer to communicate in another language and they will try to accommodate your request. Please be aware that communication via e-mail is not absolutely secure. The use of virtual platforms, like any internet communication for storage and retention of information, involve privacy risks around access and disclosure of information, however, there are safeguards in place to reduce these risks, (e.g., account registration, meeting passwords, disposal of records or devices on which information is stored)."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "This registry requires the transfer of identifiable information to the clinical institution and/or laboratory that performed your genetics test for the purposes of collecting registry data. The following information will be transferred:"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "<ul><li>First name, middle name, last name, date of birth, provincial health card number, the relevant name(s) of the potential participant’s substitute decision maker(s) and their relationship to the potential participant, a copy of your signed consent form, and a copy of the appropriate institutional/laboratory data release form (if needed)</li></ul>"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "If registry information is published, your identity will remain confidential. It is expected that the information collected in this registry will be used in analyses and will be published/presented to the scientific community at meetings and in scientific literature."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Even though the likelihood that someone may identify you from the registry data is very small, it can never be completely eliminated."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Any information, sent outside of Canadian borders may increase the risk of disclosure of information because the laws in those countries dealing with protection of information may not be as strict as in Canada. However, efforts will be made to protect your data. Any information will be transferred in compliance with all relevant Canadian privacy laws. Wherever possible, registry data that are transferred outside of Canada will be coded (this means it will not contain your personal identifying information such as your name, address, medical health number or contact information). When identifying information must be transferred, your permission will first be sought, and the data will be encrypted and transferred using secure file transfer protocols."
+        }
+      ]
+    },
+    {
+      "title": "What is the cost to participants?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Participation in this registry will not involve any additional costs to you or your private health care insurance."
+        }
+      ]
+    },
+    {
+      "title": "Are participants paid to be in this registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "You will not be paid for taking part in this registry. It is possible that the research conducted using your registry data may eventually lead to the development of new diagnostic tests, new drugs or devices, or other commercial products. There are no plans to provide payment to you if this happens."
+        }
+      ]
+    },
+    {
+      "title": "What are the rights of participants in a registry?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "You will be told, in a timely manner, about new information that may be relevant to your willingness to stay in the registry."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Your rights to privacy are legally protected by federal and provincial laws that require safeguards to ensure that your privacy is respected."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "By signing this form, you do not give up any of your legal rights against the registry or involved institutions for compensation, nor does this form relieve the registry or their agents of their legal and professional responsibilities."
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "You will be given a copy of this signed and dated consent form prior to joining the registry."
+        }
+      ]
+    },
+    {
+      "title": "Whom do participants contact for questions?",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "If you have questions about taking part in this registry, or if you suffer a research-related injury, you can talk to registry personnel, or the person who is in charge of the registry. That person is:"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "p": 2,
+              "mb": 2,
+              "bgcolor": "common.grey",
+              "borderRadius": 1,
+              "textAlign": "center"
+            }
+          },
+          "text": "<strong>Anon</strong><br><a href=\"tel:5555555555\">555-555-5555</a>"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "If you have questions about taking part in this registry, or if you suffer a research-related injury, you can talk to registry personnel, or the person who is in charge of the registry. That person is:"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "p": 2,
+              "mb": 2,
+              "bgcolor": "common.grey",
+              "borderRadius": 1,
+              "textAlign": "center"
+            }
+          },
+          "text": "<strong>Research Ethics Board</strong><br><a href=\"tel:5555555555\">555-555-5555</a>"
+        }
+      ]
+    },
+    {
+      "title": "Signatures",
+      "nextAction": "submit",
+      "components": [
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "<b>By signing this form, you are agreeing to take part in the registry. You are also confirming that you have read and understood the information in this consent form.</b>"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "answered-questions",
+          "text": "All of my questions have been answered,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "understand-information",
+          "text": "I understand the information within this informed consent form,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "data-access",
+          "text": "I allow access to medical records, genetic data, and related personal health information as explained in this consent form,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "data-storage",
+          "text": "My genetic and clinical data will be stored in the PCGL registry indefinitely or until no longer useful for research purposes,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "data-sharing",
+          "text": "My coded genetic and clinical data will be shared within and outside of Canada as explained in this consent form,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "data-collection",
+          "text": "I agree that my data collected for this registry may be used in future research,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "understand-risks",
+          "text": "I understand that consent for the registry and other research studies (if applicable) will take place using an online participant portal, which has privacy risks associated with its use,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "voluntary",
+          "text": "I understand that my participation in the registry is voluntary and I may withdraw from the registry at any time,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "do-not-give-up-rights",
+          "text": "I do not give up any of my legal rights by signing this consent form,"
+        },
+        {
+          "type": "checkbox",
+          "isRequired": true,
+          "id": "agree-to-take-part",
+          "text": "I agree, or agree to allow the person I am responsible for, to take part in this study"
+        },
+        {
+          "type": "hr"
+        },
+        {
+          "type": "text",
+          "props": {
+            "sx": {
+              "mb": 2
+            }
+          },
+          "text": "Please fill in your information below. <b>By entering your name, you are effectively signing this electronic consent form.</b>"
+        },
+        {
+          "type": "textField",
+          "isRequired": true,
+          "id": "first-name",
+          "text": "First Name"
+        },
+        {
+          "type": "textField",
+          "isRequired": true,
+          "id": "last-name",
+          "text": "Last Name"
+        },
+        {
+          "type": "datePicker",
+          "isRequired": true,
+          "id": "birthdate",
+          "text": "Date of Birth"
+        },
+        {
+          "type": "radiogroup",
+          "isRequired": true,
+          "id": "sex",
+          "text": "Sex",
+          "choices": [
+            {
+              "value": "Male"
+            },
+            {
+              "value": "Female"
+            },
+            {
+              "value": "Intersex"
+            }
+          ]
+        },
+        {
+          "type": "datePicker",
+          "isRequired": true,
+          "disabled": true,
+          "min": "today",
+          "max": "today",
+          "id": "consent-date",
+          "text": "Date"
+        }
+      ]
+    }
+  ]
+}

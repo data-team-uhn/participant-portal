@@ -1,0 +1,123 @@
+version: '2.4'
+
+services:
+  app:
+    platform: linux/amd64
+    container_name: app
+    build: ./app
+    volumes:
+      - ./app/.babelrc:/home/node/.babelrc
+      - ./app/src:/home/node/src
+      - ./app/start.js:/home/node/start.js
+      - ./app/webpack.config.js:/home/node/webpack.config.js
+      - ./app/static:/home/node/dist
+    environment:
+      - LOG_FORMAT=prod
+      - NODE_ENV=production
+      - ENVIRONMENT=production
+      - SPA_BASE_URL=$HOST
+      - API_BASE_URL=$API_BASE_URL
+      - APP_BASE_URL=$HOST
+      - INTERNAL_API_BASE_URL=http://api:8000
+      - REGISTRY_EXTERNAL_ID
+      - ADMIN_CONTACT
+      - GOOGLE_CAPTCHA_ENABLED
+      - GOOGLE_CAPTCHA_SITE_KEY
+      - MAX_CONTACT_TIMES
+    ports:
+      - "$APP_PORT:8000"
+    entrypoint: node start.js
+    networks:
+      - portal
+
+  api:
+    platform: linux/amd64
+    container_name: api
+    build: ./api
+    volumes:
+      - ./api/config:/home/node/config
+      - ./api/src:/home/node/src
+      - ./api/scripts:/home/node/scripts
+      - ./api/static/uploads:/home/node/uploads
+      - ./audit_logs:/home/node/log
+    environment:
+      - AUDIT_LOGS_DIR=/home/node/log
+      - NODE_ENV=production
+      - ENVIRONMENT=production
+      - SPA_BASE_URL=$HOST
+      - API_BASE_URL=$API_BASE_URL
+      - APP_BASE_URL=$HOST
+      - DEBUG=portal:*
+      - LOG_FORMAT=prod
+      - POSTGRES_DB=portal
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=portal
+      - MAIL_SERVICE
+      - ADMIN_CONTACT
+      - ADMIN_CONTACT_NAME
+      - REGISTRY_EXTERNAL_ID
+      - GOOGLE_CAPTCHA_ENABLED
+      - GOOGLE_CAPTCHA_URL
+      - GOOGLE_CAPTCHA_SITE_KEY
+      - MS_CLIENT_ID
+      - MS_AUTHORITY
+      - MS_TEST_MODE
+      - MS_TEST_MODE_EMAIL
+      - MAX_CONTACT_TIMES
+    env_file:
+      - ./api/secrets/POSTGRES_PASSWORD
+      - ./api/secrets/GOOGLE_API_KEY
+      - ./api/secrets/MS_CERTIFICATE_THUMBPRINT
+      - ./api/secrets/MS_CERTIFICATE_PRIVATE_KEY
+    ports:
+    - "$API_PORT:8000"
+    command: yarn run start
+    depends_on:
+      postgres:
+        condition: service_started
+    #  Uncomment for demo
+    #      mailhog:
+    #        condition: service_started
+    networks:
+      - portal
+
+  postgres:
+    platform: linux/amd64
+    container_name: postgres
+    image: postgres:16.3
+    environment:
+      - POSTGRES_DB=portal
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=portal
+    env_file:
+      - ./api/secrets/POSTGRES_PASSWORD
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - portal
+
+#  Uncomment for demo
+#  mailhog:
+#    platform: linux/amd64
+#    container_name: mailhog
+#    image: mailhog/mailhog
+#    volumes:
+#      - ./mailhog/auth.txt:/auth.txt
+#    ## default is admin:changeme -- update on VM
+#    command: -auth-file=/auth.txt
+#    networks:
+#      - portal
+#    ports:
+#      - 1025:1025
+#      - 8025:8025
+
+volumes:
+  postgres-data: { }
+
+networks:
+  portal:
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
+    ipam:
+      config:
+      - subnet: 10.103.0.0/24

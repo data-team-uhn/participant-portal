@@ -1,0 +1,17 @@
+{
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "name": "Pan-Canadian Genome Library",
+  "short_name": "PCGL",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/login",
+  "background_color": "#FFFFFF",
+  "theme_color": "#012D4C"
+}

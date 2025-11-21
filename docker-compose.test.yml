@@ -1,0 +1,64 @@
+version: '2.4'
+
+services:
+  api-test:
+    platform: linux/amd64
+    container_name: participant-test-api
+    build: ./api
+    volumes:
+      - ./api/config:/home/node/config
+      - ./api/src:/home/node/src
+      - ./api/scripts:/home/node/scripts
+      - ./api/static/uploads:/home/node/uploads
+      - ./api/test:/home/node/test
+    environment:
+      - NODE_ENV=development
+      - ENVIRONMENT=test
+      - API_BASE_URL=http://localhost:8000
+      - APP_BASE_URL=http://localhost:$APP_PORT
+      - DEBUG=participant-portal:*
+      - LOG_FORMAT=test
+      - POSTGRES_DB=portal
+      - POSTGRES_HOST=postgres-test
+      - POSTGRES_USER=portal
+      - CHOKIDAR_USEPOLLING=${CHOKIDAR_USEPOLLING:-false}
+      - REGISTRY_EXTERNAL_ID
+      - MAX_CONTACT_TIMES
+      - MAIL_SERVICE=console.log
+    env_file:
+      - ./api/secrets/POSTGRES_PASSWORD
+    ports:
+      - "$TEST_PORT:8000"
+      - "9232:9229"
+    command: ./node_modules/.bin/nodemon --inspect=0.0.0.0:9229 --ext "ts" --watch "src/**/*" --watch "test/**/*" --exec "ts-node src/index.ts"
+    depends_on:
+      postgres-test:
+        condition: service_started
+    networks:
+      - test-portal
+
+  postgres-test:
+    platform: linux/amd64
+    container_name: participant-test-postgres
+    image: postgres:16.3
+    environment:
+      - POSTGRES_DB=portal
+      - POSTGRES_HOST=postgres-test
+      - POSTGRES_USER=portal
+    env_file:
+      - ./api/secrets/POSTGRES_PASSWORD
+    volumes:
+      - postgres-data-test:/var/lib/postgresql/data
+    networks:
+      - test-portal
+
+volumes:
+  postgres-data-test: { }
+
+networks:
+  test-portal:
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
+    ipam:
+      config:
+      - subnet: 10.103.0.0/24
